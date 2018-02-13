@@ -10,3 +10,9 @@ TEST(ComputePrimeFactors, TwoPrimeFactors) {
     ASSERT_EQ(1, factors.size());
     ASSERT_EQ(2, factors[0]);
 }
+
+TEST(ComputePrimeFactors, ThreePrimeFactors) {
+    const std::vector<int> factors = PrimeFactors::of(3);
+    ASSERT_EQ(1, factors.size());
+    ASSERT_EQ(3, factors[0]);
+}
