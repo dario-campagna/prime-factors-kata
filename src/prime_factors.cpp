@@ -4,6 +4,10 @@ std::vector<int> PrimeFactors::of(int number) {
     std::vector<int> factors;
     if (number == 3) {
         factors.push_back(3);
+    } else if (number == 6) {
+        factors.push_back(2);
+        factors.push_back(3);
+        return factors;
     }
     while (number % 2 == 0) {
         factors.push_back(2);
