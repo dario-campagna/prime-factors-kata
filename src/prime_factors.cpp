@@ -2,16 +2,13 @@
 
 std::vector<int> PrimeFactors::of(int number) {
     std::vector<int> factors;
-    if (number == 3) {
-        factors.push_back(3);
-    } else if (number == 6) {
-        factors.push_back(2);
-        factors.push_back(3);
-        return factors;
-    }
-    while (number % 2 == 0) {
-        factors.push_back(2);
-        number /= 2;
+    int candidate = 2;
+    while (candidate <= number) {
+        while (number % candidate == 0) {
+            factors.push_back(candidate);
+            number /= candidate;
+        }
+        candidate++;
     }
     return factors;
 }
