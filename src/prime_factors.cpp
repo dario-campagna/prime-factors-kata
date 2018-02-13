@@ -2,13 +2,10 @@
 
 std::vector<int> PrimeFactors::of(int number) {
     std::vector<int> factors;
-    int candidate = 2;
-    while (candidate <= number) {
-        while (number % candidate == 0) {
+    for (int candidate = 2;candidate <= number;candidate++) {
+        for (;number % candidate == 0;number/=candidate) {
             factors.push_back(candidate);
-            number /= candidate;
         }
-        candidate++;
     }
     return factors;
 }

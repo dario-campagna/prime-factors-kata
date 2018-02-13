@@ -31,3 +31,11 @@ TEST(ComputePrimeFactors, EightPrimeFactors) {
 TEST(ComputePrimeFactors, SixPrimeFactors) {
     ASSERT_VECTOR_EQ({2,3}, PrimeFactors::of(6));
 }
+
+TEST(ComputePrimeFactors, ThirtyPrimeFactors) {
+    ASSERT_VECTOR_EQ({2,3,5}, PrimeFactors::of(30));
+}
+
+TEST(ComputePrimeFactors, OneHundredEightyPrimeFactors) {
+    ASSERT_VECTOR_EQ({2,2,3,3,5}, PrimeFactors::of(180));
+}
