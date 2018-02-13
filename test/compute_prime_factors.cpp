@@ -23,3 +23,7 @@ TEST(ComputePrimeFactors, ThreePrimeFactors) {
 TEST(ComputePrimeFactors, FourPrimeFactors) {
     ASSERT_VECTOR_EQ({2,2}, PrimeFactors::of(4));
 }
+
+TEST(ComputePrimeFactors, EightPrimeFactors) {
+    ASSERT_VECTOR_EQ({2,2,2}, PrimeFactors::of(8));
+}
